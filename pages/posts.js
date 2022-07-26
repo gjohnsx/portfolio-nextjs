@@ -1,6 +1,6 @@
 import { getSortedPostsData } from '../lib/posts';
-import Blogs from "../components/blogs";
-import Layout from "../components/layout";
+import Blogs from "../components/Blogs";
+import Layout from "../components/Layout";
 
 const metaDescription = 'Read my writing about web3, decentralization, and digital marketing.';
 const pageTitle = 'Blogs';

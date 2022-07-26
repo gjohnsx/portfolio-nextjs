@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Head from 'next/head';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const metaDescription = 'Contact me here or on Twitter to talk about your programming needs.';
 const pageTitle = 'Contact Me';

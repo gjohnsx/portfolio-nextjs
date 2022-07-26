@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { getSortedPostsData } from '../lib/posts';
 import Hero from '../components/Hero';
 import Blogs from '../components/Blogs';
 import Layout from '../components/Layout';
-import Link from 'next/link';
 
 const metaDescription = 'Welcome to the portfolio site of Gregory Johns.';
 const pageTitle = 'Home';
