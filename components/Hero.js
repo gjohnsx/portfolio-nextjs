@@ -1,41 +1,35 @@
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
+import Image from 'next/image';
+import profilePic from '../public/images/5680pairbeanz-prod.png';
+import socialButtons from './social-buttons';
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden mx-auto px-4 py-2 sm:py-12 max-w-5xl">
-        <div className="text-center">
-            <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
-            <span className="block xl:inline">Welcome to the portfolio of</span>{' '}
-            <span className="block text-primary xl:inline">Gregory Johns</span>
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-base-content sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
-            </p>
-            <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-            <div className="rounded-md shadow">
-                <a
-                href="#"
-                  className='btn btn-primary btn-lg'                
-                >
-                Get started
+    <div className="hero py-20">
+      <div className="hero-content flex-col lg:flex-row">
+        <div className='lg:mr-24 flex flex-col justify-center items-center lg:items-start'>
+          <h1 className="text-5xl font-extrabold text-primary text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">Gregory Johns</h1>
+          <h2 className="mt-3 max-w-md text-lg sm:text-xl md:mt-5 md:max-w-3xl">
+            Developer and Digital Marketer
+          </h2>
+
+          <div className="mt-8 flex space-x-6 justify-center md:justify-start">
+              {socialButtons.map((item) => (
+                <a key={item.name} href={item.href} target={item.target} rel={item.rel} className="text-neutral hover:text-neutral-focus">
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-10 w-10" aria-hidden="true" />
                 </a>
-            </div>
-            <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a
-                href="#"
-                className='btn btn-secondary btn-lg'
-                >
-                Live demo
-                </a>
-            </div>
-            </div>
+              ))}
+          </div>
+
         </div>
+        <Image
+          src={profilePic}
+          alt='gjohnsx profile picture'
+          className='rounded-full shadow-sm'
+          height={300}
+          width={300}
+        />
+      </div>
     </div>
-  )
-}
+  );
+};

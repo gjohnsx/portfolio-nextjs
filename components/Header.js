@@ -69,8 +69,8 @@ const ProfileImage = () => (
       src={profilePic} 
       alt="gjohnsx profile picture"
       className='rounded-full shadow'
-      width={85}
-      height={85}
+      width={50}
+      height={50}
     />
 );
   

@@ -25,7 +25,7 @@ export default function HomePage({ allPostsData }) {
 
         <Hero />
 
-        <section className='bg-base-300'>
+        <section className='bg-base-200'>
           <div className='container px-4 py-2 sm:py-12'>
               <Blogs posts={allPostsData} heading='Blogs' />
           </div>

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from './Header';
+import Footer from './Footer';
 
 export const siteTitle = 'Gjohnsx Portfolio';
 
@@ -25,6 +26,8 @@ export default function Layout({ children, metaDescription, pageTitle }) {
             <main className=''>
                 {children}
             </main>
+
+            <Footer />
 
         </div>
     );
