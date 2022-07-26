@@ -102,8 +102,8 @@ export default function Header(props) {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-primary-focus' : 'text-primary-content',
-                      'group bg-primary rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      open ? 'text-secondary' : 'text-primary-content',
+                      'group bg-primary rounded-md inline-flex items-center text-base font-medium hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary'
                     )}
                   >
                     <span>Solutions</span>
@@ -125,7 +125,7 @@ export default function Header(props) {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
+                    <Popover.Panel className="bg-white absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                           {solutions.map((item) => (
@@ -178,8 +178,8 @@ export default function Header(props) {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-primary-focus' : 'text-primary-content',
-                      'group bg-primary rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      open ? 'text-secondary' : 'text-primary-content',
+                      'group bg-primary rounded-md inline-flex items-center text-base font-medium hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary'
                     )}
                   >
                     <span>More</span>
@@ -201,7 +201,7 @@ export default function Header(props) {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0">
+                    <Popover.Panel className="bg-white absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
