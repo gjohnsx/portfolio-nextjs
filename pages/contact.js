@@ -1,24 +1,22 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
-
-const metaDescription = 'Contact me here or on Twitter to talk about your programming needs.';
-const pageTitle = 'Contact Me';
+import ContactForm from '../components/ContactForm';
+import socialButtons from '../components/social-buttons';
 
 export default function Contact() {
     return (
-        <>
-            <Layout
-                metaDescription={metaDescription}
-                pageTitle={pageTitle}
-            >
-                <h1>Contact</h1>
-                <p>Contact me...</p>
-                <h2>
-                    <Link href="/">
-                    <a>Back to home</a>
-                    </Link>
-                </h2>   
-            </Layout>
-        </>
-    )
-}
+        <Layout
+            metaDescription='Get in touch with me.'
+            pageTitle='Contact'
+        >
+            <div className='container my-4 lg:my-12'>
+                <h1 
+                    className="mb-4 text-center text-5xl font-extrabold text-primary text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
+                >
+                    Contact me
+                </h1>
+                <ContactForm />
+            </div>
+        </Layout>
+    );
+};
