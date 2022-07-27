@@ -4,7 +4,7 @@ import Blogs from '../components/Blogs';
 import Layout from '../components/Layout';
 
 const metaDescription = 'Welcome to the portfolio site of Gregory Johns.';
-const pageTitle = 'Home';
+const pageTitle = 'Gregory Johns';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();

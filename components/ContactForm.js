@@ -15,10 +15,6 @@ const useField = (type) => {
     };
 };
 
-const handleSubmit = (event) => {
-    console.log('submitting form');
-};
-
 export default function ContactForm() {
     const name = useField('text');
     const email = useField('email');
@@ -28,7 +24,8 @@ export default function ContactForm() {
         <div className="flex-col lg:flex-row w-1/2 mx-auto">
             <form
                 className="isolate -space-y-px rounded-md shadow-sm"
-                onSubmit={handleSubmit}
+                action="/api/form"
+                method="post"
             >
                 <div className="relative border border-neutral rounded-md rounded-b-none px-3 py-2 focus-within:z-10 focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                     <label htmlFor="name" className="block text-sm font-medium">

@@ -9,7 +9,7 @@ export default function Layout({ children, metaDescription, pageTitle }) {
     return (
         <div className=''>
             <Head>
-                {/* <link rel="icon" href='../public/images/5680pairbeanz-prod.png' /> */}
+                <link rel="icon" href='/images/favicon.ico' />
                 <title>{pageTitle} - gjohnsx</title>
                 <meta
                     name="description"
