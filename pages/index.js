@@ -4,7 +4,7 @@ import Blogs from '../components/Blogs';
 import Layout from '../components/Layout';
 
 const metaDescription = 'Welcome to the portfolio site of Gregory Johns.';
-const pageTitle = 'Home';
+const pageTitle = 'Gregory Johns';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -25,7 +25,7 @@ export default function HomePage({ allPostsData }) {
 
         <Hero />
 
-        <section className='bg-base-200'>
+        <section className='bg-gray-50'>
           <div className='container px-4 py-2 sm:py-12'>
               <Blogs posts={allPostsData} heading='Blogs' />
           </div>
