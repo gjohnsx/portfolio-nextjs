@@ -33,8 +33,8 @@ export default function Post({ postData, allPostsData }) {
         >
             <PostLayout postData={postData} />
 
-            <div className='bg-base-200'>
-                <Blogs posts={filteredPosts} heading='More Posts' />
+            <div className='bg-gray-100'>
+                <Blogs posts={filteredPosts} heading='More Posts' showEmail={false}/>
             </div>
         </Layout>
     );

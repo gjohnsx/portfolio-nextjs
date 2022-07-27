@@ -7,7 +7,7 @@ export const siteTitle = 'Gjohnsx Portfolio';
 export default function Layout({ children, metaDescription, pageTitle }) {
 
     return (
-        <div className=''>
+        <div className='bg-white min-h-screen'>
             <Head>
                 <link rel="icon" href='/images/favicon.ico' />
                 <title>{pageTitle} - gjohnsx</title>
