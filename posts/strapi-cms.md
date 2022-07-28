@@ -2,6 +2,7 @@
 title: 'First thoughts on Strapi CMS'
 date: '2022-07-26'
 description: 'Read my first thoughts on Strapi CMS.'
+tags: ['CMS', 'Strapi']
 ---
 
 ### Strapi CMS

@@ -14,7 +14,8 @@ export default function Hero() {
                 <span className="text-sky-700 md:block">Gregory Johns</span>
               </h1>
 
-              <h2 className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+              {/* <h2 className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"> */}
+              <h2 className="mt-5 max-w-prose mx-auto text-xl text-gray-700">
                 Developer & Digital Marketer
               </h2>
 

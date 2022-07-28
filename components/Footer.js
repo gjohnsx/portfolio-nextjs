@@ -1,13 +1,13 @@
+import Link from "next/link";
 import socialButtons from "./social-buttons";
   
 const navigation = {
     main: [
-      { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Jobs', href: '#' },
-      { name: 'Press', href: '#' },
-      { name: 'Accessibility', href: '#' },
-      { name: 'Partners', href: '#' },
+      { name: 'Home', href: '/' },
+      { name: 'About', href: '/about' },
+      { name: 'Projects', href: '/projects' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' },
     ],
     social: [
       {
@@ -81,9 +81,11 @@ export default function Footer() {
             <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
             {navigation.main.map((item) => (
                 <div key={item.name} className="px-5 py-2">
-                <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                    {item.name}
-                </a>
+                  <Link href={item.href}>
+                    <a className="text-base text-gray-500 hover:text-gray-900">
+                        {item.name}
+                    </a>
+                  </Link>
                 </div>
             ))}
             </nav>
