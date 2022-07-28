@@ -38,8 +38,7 @@ export default function HomePage({ allPostsData, allProjectsData }) {
                   Projects
                 </h2>
                 <p className="mt-5 max-w-prose mx-auto text-xl text-gray-700">
-                  Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper
-                  malesuada. Eleifend condimentum id viverra nulla.
+                  Check out what I've built and what I'm working on now. I'm focusing on React, Next.js, and starting to learn Ethers.js and Solidity.
                 </p>
               </div>
             </div>
