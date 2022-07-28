@@ -1,15 +1,60 @@
 import Link from "next/link";
 
-export default function Blogs({ posts, heading, showEmail = true }) {
+const Blog = ({ post }) => {
+    return (
+        <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="px-4 py-5 sm:p-6">
+                <p className="text-sm text-gray-400">
+                    <time dateTime={post.datetime}>{post.date}</time>
+                </p>
+
+                <Link href={`/posts/${post.id}`}>
+                    <a className="mt-2 block">
+                        <p className="text-xl font-semibold text-gray-800 hover:underline">{post.title}</p>
+                    </a>
+                </Link>
+
+                <div className="flex">
+                    {post.tags.map(tag => (
+                        <div key={tag} className="text-sm text-sky-800 mt-1 mr-1">
+                            <Link href={`/posts/${tag.toLowerCase().replace('.', '-')}`}>
+                                <a>
+                                    <span
+                                        className='inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-sky-100'
+                                    >
+                                        {tag}
+                                    </span>
+                                </a>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="mt-3">
+                    <Link href={`/posts/${post.id}`}>
+                        <a className="text-base font-semibold text-orange-600 hover:text-orange-700">
+                        Read full story
+                        </a>
+                    </Link>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default function Blogs({ posts, heading, filter = null, showEmail = true }) {
+    if (filter) {
+        posts = posts.filter(post => post.tags.includes(filter));
+    }
 
     return (
         <div className="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
 
             <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
                 <div>
-                <h2 className="text-3xl tracking-tight font-extrabold sm:text-4xl text-sky-700">
-                    {heading}
-                </h2>
+                    <h2 className="text-3xl tracking-tight font-extrabold sm:text-4xl text-sky-700">
+                        {heading}
+                    </h2>
                     <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center text-gray-700">
                         <p className="text-xl">Read my writing about web3, decentralization, and digital marketing.</p>
 
@@ -45,37 +90,7 @@ export default function Blogs({ posts, heading, showEmail = true }) {
 
                 <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
                     {posts.map((post) => (
-                        <div className="bg-white overflow-hidden shadow rounded-lg">
-                            <div className="px-4 py-5 sm:p-6">
-                                <p className="text-sm text-gray-400">
-                                    <time dateTime={post.datetime}>{post.date}</time>
-                                </p>
-
-                                <Link href={`/posts/${post.id}`}>
-                                    <a className="mt-2 block">
-                                        <p className="text-xl font-semibold text-gray-800 hover:underline">{post.title}</p>
-                                    </a>
-                                </Link>
-
-                                <p className="text-sm text-sky-800 mt-1">
-                                    {/* <a href='#' className="hover:underline"> */}
-                                        <span
-                                            className='inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-sky-100'
-                                        >
-                                            {post.id}
-                                        </span>
-                                    {/* </a> */}
-                                </p>
-
-                                <div className="mt-3">
-                                    <Link href={`/posts/${post.id}`}>
-                                        <a className="text-base font-semibold text-orange-600 hover:text-orange-700">
-                                        Read full story
-                                        </a>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        <Blog post={post} key={post.id} />
                     ))}
                 </div>
             </div>
