@@ -38,7 +38,7 @@ export default function HomePage({ allPostsData, allProjectsData }) {
                   Projects
                 </h2>
                 <p className="mt-5 max-w-prose mx-auto text-xl text-gray-700">
-                  Check out what I've built and what I'm working on now. I'm focusing on React, Next.js, and starting to learn Ethers.js and Solidity.
+                  Check out what I've built and what I'm working on now. I'm focusing on React and Next.js, and I'm starting to learn Ethers.js and Solidity.
                 </p>
               </div>
             </div>
