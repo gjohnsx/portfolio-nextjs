@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaReact, FaPython } from "react-icons/fa";
 import Image from 'next/image';
 
