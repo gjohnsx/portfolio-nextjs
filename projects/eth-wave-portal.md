@@ -10,7 +10,7 @@ imageWidth: 586
 imageLink: null
 productionLink: '/'
 githubLink: 'https://github.com/gjohnsx/eth-wave-portal'
-published: true
+published: false
 ---
 
 ## How it's made
