@@ -4,7 +4,7 @@ import socialButtons from './social-buttons';
 
 export default function Hero() {
   return (
-    <main className="bg-white py-2 md:py-12">
+    <main className='bg-white py-2 md:py-12'>
       <div className="mx-auto max-w-7xl">
         <div className="md:grid md:grid-cols-12 md:gap-8">
           <div className="px-4 sm:px-6 text-center md:max-w-2xl md:mx-auto md:col-span-6 md:text-left md:flex md:items-center">

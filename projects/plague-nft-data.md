@@ -3,6 +3,7 @@ title: 'The Plague NFT Data Collection'
 date: '2022-04-25'
 description: 'The Plague NFT Twitter Like and Retweet Data using Python and Tweepy.'
 tags: ['Python', 'Twitter', 'NFT']
+techStack: ['Python']
 image: '/images/plague-nft-data.png'
 imageHeight: 771
 imageWidth: 907

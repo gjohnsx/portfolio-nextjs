@@ -3,6 +3,7 @@ title: 'Azuki Sales Twitter Bot'
 date: '2022-02-21'
 description: 'Azuki Twitter Sales Notification bot using Python, Tweepy, AWS Lambda, and Etherscan API.'
 tags: ['Python', 'Twitter', 'NFT']
+techStack: ['Python']
 image: '/images/azuki-sales-bot.png'
 imageHeight: 928
 imageWidth: 586
