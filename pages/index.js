@@ -75,7 +75,7 @@ export default function HomePage({ allPostsData, allProjectsData }) {
                           <p className='text-gray-700 mb-2'>{project.description}</p>
   
                           {/* Tech Stack Logos */}
-                          <div className='flex'>
+                          <div className='flex justify-center sm:justify-start'>
                             {project.techStack.map(tech => (
                               <div key={tech} className='mr-2'>
                                 <span className='text-sky-900'>{techStackIcons.find(icon => tech === icon.name).icon}</span>
@@ -83,7 +83,7 @@ export default function HomePage({ allPostsData, allProjectsData }) {
                             ))}
                           </div>
   
-                          <div className='flex my-2'>
+                          <div className='flex justify-center sm:justify-start my-2'>
                             {project.id !== 'portfolio' && (
                               <Link href={project.productionLink}>
                                 <a
@@ -105,7 +105,7 @@ export default function HomePage({ allPostsData, allProjectsData }) {
                           </div>
   
                           <Link href={project.githubLink}>
-                            <a target='_blank' className='text-gray-700 hover:text-orange-400'>
+                            <a target='_blank' className='text-gray-700 hover:text-orange-400 mx-auto sm:mx-0'>
                               <svg fill="currentColor" viewBox="0 0 24 24" className="h-10 w-10">
                                   <path
                                     fillRule="evenodd"

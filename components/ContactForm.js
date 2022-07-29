@@ -21,7 +21,7 @@ export default function ContactForm() {
     const message = useField('textarea');
 
     return (
-        <div className="flex-col lg:flex-row w-1/2 mx-auto">
+        <div className="flex-col lg:flex-row lg:w-1/2 mx-auto">
             <form
                 className="isolate -space-y-px rounded-md shadow-sm text-gray-700"
                 action="/api/form"
