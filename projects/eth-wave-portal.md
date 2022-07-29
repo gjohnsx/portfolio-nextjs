@@ -1,6 +1,6 @@
 ---
 title: 'Ethereum Wave Portal'
-date: '2022-07-27'
+date: '2022-07-28'
 description: 'A web3-connected dashboard where people can send me a message stored permanently on the ethereum blockchain. Web3 integration with Ethers.js and UI with TailwindUI'
 tags: ['React', 'Web3', 'TailwindCSS']
 techStack: ['React', 'Metamask', 'TailwindCSS']
@@ -8,14 +8,19 @@ image: null
 imageHeight: 928
 imageWidth: 586
 imageLink: null
-productionLink: '/'
+productionLink: 'https://wave.gjohns.xyz/'
 githubLink: 'https://github.com/gjohnsx/eth-wave-portal'
-published: false
+published: true
 ---
 
-## How it's made
-I wanted to build a portfolio site that made use of these technologies:
-- Next.js
-- React
-- Vercel hosting (I'm loving DPS)
-- TailwindCSS
+Send a message and store it permanently on the (goerli testnet) blockchain!
+
+Check out the [Github](https://github.com/gjohnsx/eth-wave-portal) to see the simple Solidity smart contracts for this project.
+
+## Technology
+- Create-react-app for the single page app
+- Ethers.js to connect to wallet and execute smart contracts
+- TailwindCSS and TailwindUI components for styling
+- Notifications that change depending on transaction status
+
+I know it's sketchy connecting your wallet to random sites (I hope you're using a test wallet on a separate browser for dev stuff!). So I added a short demo video on the home page to see what the app looks like.
