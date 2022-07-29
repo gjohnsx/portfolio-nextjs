@@ -65,7 +65,7 @@ function classNames(...classes) {
 
 const ProfileImage = () => (
     <Image
-      src={profilePic} 
+      src={profilePic}
       alt="gjohnsx profile picture"
       className='rounded-full shadow'
       width={50}
@@ -91,8 +91,10 @@ export default function Header() {
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
         </div>
+        
         <Popover.Group as="nav" className="hidden md:flex space-x-10">
-          <Popover className="relative">
+          
+          {/* <Popover className="relative">
             {({ open }) => (
               <>
                 <Popover.Button
@@ -157,18 +159,29 @@ export default function Header() {
                 </Transition>
               </>
             )}
-          </Popover>
+          </Popover> */}
 
-          <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-            Pricing
-          </a>
+          <Link href='/about'>
+            <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+              About
+            </a>
+          </Link>
+
+          <Link href='/projects'>
+
+            <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Projects
+            </a>
+          </Link>
+
           <Link href='/posts'>
             <a className="text-base font-medium text-gray-500 hover:text-gray-900">
               Blogs
             </a>
           </Link>
 
-          <Popover className="relative">
+          {/* MORE Popover */}
+          {/* <Popover className="relative">
             {({ open }) => (
               <>
                 <Popover.Button
@@ -215,7 +228,8 @@ export default function Header() {
                 </Transition>
               </>
             )}
-          </Popover>
+          </Popover> */}
+
         </Popover.Group>
 
         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -228,7 +242,7 @@ export default function Header() {
             </a>
           </Link>
         </div>
-        
+
       </div>
 
       <Transition
@@ -259,6 +273,7 @@ export default function Header() {
                   </Popover.Button>
                 </div>
               </div>
+
               <div className="mt-6">
                 <nav className="grid grid-cols-1 gap-7">
                   {solutions.map((solution) => (
@@ -276,6 +291,7 @@ export default function Header() {
                 </nav>
               </div>
             </div>
+
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
                 <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
@@ -289,7 +305,8 @@ export default function Header() {
                 <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Enterprise
                 </a>
-                {resources.map((resource) => (
+
+                {/* {resources.map((resource) => (
                   <a
                     key={resource.name}
                     href={resource.href}
@@ -297,7 +314,8 @@ export default function Header() {
                   >
                     {resource.name}
                   </a>
-                ))}
+                ))} */}
+
               </div>
 
               <div className="mt-6 mx-auto w-max">
