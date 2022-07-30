@@ -9,7 +9,8 @@ import {
   XIcon,
   HomeIcon,
   UserIcon,
-  PencilIcon
+  PencilIcon,
+  ClipboardListIcon
 } from '@heroicons/react/outline'
 
 const solutions = [
@@ -22,26 +23,28 @@ const solutions = [
   {
     name: 'About',
     description: 'Learn about my interests and what drives me.',
-    href: '#',
+    href: '/about',
     icon: UserIcon,
   },
   {
     name: 'Projects',
     description: "See what I've built and what I'm working on now.",
-    href: '#',
+    href: '/projects',
     icon: ViewGridIcon,
   },
   {
     name: 'Blog',
     description: 'Read my writing on marketing, decentralization, and more.',
-    href: '#',
+    href: '/posts',
     icon: PencilIcon,
   },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+  {
+    name: 'Resume',
+    description: 'View my resume.',
+    href: '/files/johns-gregory-resume.pdf',
+    icon: ClipboardListIcon,
+  },
+];
 
 const ProfileImage = () => (
     <Image
@@ -141,6 +144,7 @@ export default function Header() {
                     <Link href={solution.href} key={solution.name}>
                       <a
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                        target={ solution.name === 'Resume' ? '_blank' : '' }
                       >
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-sky-800 text-white">
                           <solution.icon className="h-6 w-6" aria-hidden="true" />
