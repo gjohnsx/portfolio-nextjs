@@ -7,6 +7,7 @@ const navigation = {
       { name: 'About', href: '/about' },
       { name: 'Projects', href: '/projects' },
       { name: 'Blog', href: '/posts' },
+      { name: 'Resume', href: '/files/johns-gregory-resume.pdf'},
       { name: 'Contact', href: '/contact' },
     ],
 };
@@ -19,7 +20,7 @@ export default function Footer() {
             {navigation.main.map((item) => (
                 <div key={item.name} className="px-5 py-2">
                   <Link href={item.href}>
-                    <a className="text-base text-gray-500 hover:text-gray-900">
+                    <a className="text-base text-gray-500 hover:text-gray-900" target={item.name === 'Resume' ? '_blank' : '' }>
                         {item.name}
                     </a>
                   </Link>
