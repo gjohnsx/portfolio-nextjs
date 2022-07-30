@@ -8,7 +8,7 @@ image: '/images/plague-nft-data.png'
 imageHeight: 771
 imageWidth: 907
 imageLink: 'https://twitter.com/ThePlagueNFT/status/1518728561175273472'
-productionLink: 'https://twitter.com/gjohnsx'
+productionLink: 'https://tweets.gjohns.xyz/'
 githubLink: 'https://github.com/gjohnsx/'
 published: true
 ---
@@ -19,3 +19,6 @@ I wrote some loops so [The Plague NFT](https://twitter.com/ThePlagueNFT) could p
 The founder was able to see which users were engaged with their tweets and to what degree.
 
 This helped them select users to add to the whitelist.
+
+## Web App Under Construction
+I'm working on changing this into a web app where anyone can pull Liker/Retweeter data.
