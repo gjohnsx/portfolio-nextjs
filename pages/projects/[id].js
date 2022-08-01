@@ -24,8 +24,6 @@ export async function getStaticProps({ params }) {
 };
   
 export default function Project({ projectData, allProjectsData }) {
-    console.log('product.id =', allProjectsData, '\nprojectData.id =', projectData.id);
-
     const filteredProjects = allProjectsData.filter(project => project.id !== projectData.id);
 
     return (
