@@ -1,7 +1,7 @@
 import { getAllPostIds, getPostData, getSortedPostsData} from '../../lib/posts';
 import Layout from '../../components/Layout';
 import Blogs from '../../components/Blogs';
-import PostLayout from '../../components/Post';
+import PostLayout from '../../components/layouts/Post';
 
 export async function getStaticPaths() {
     const paths = getAllPostIds();

@@ -88,7 +88,7 @@ export default function Blogs({ posts, heading, filter = null, showEmail = true 
                     </div>
                 </div>
 
-                <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
+                <div className="mt-6 pt-10 grid gap-2 lg:gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
                     {posts.map((post) => (
                         <Blog post={post} key={post.id} />
                     ))}

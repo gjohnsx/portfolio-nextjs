@@ -1,7 +1,7 @@
 import { getAllProjectIds, getProjectData, getSortedProjectsData } from '../../lib/projects';
 import Layout from '../../components/Layout';
-import Blogs from '../../components/Blogs';
-import PostLayout from '../../components/Post';
+import Projects from '../../components/Projects';
+import ProjectLayout from '../../components/layouts/Project';
 
 export async function getStaticPaths() {
     const paths = getAllProjectIds();
@@ -9,7 +9,7 @@ export async function getStaticPaths() {
       paths,
       fallback: false,
     };
-}
+};
 
 export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.id);
@@ -21,9 +21,11 @@ export async function getStaticProps({ params }) {
         allProjectsData
       },
     };
-}
+};
   
 export default function Project({ projectData, allProjectsData }) {
+    console.log('product.id =', allProjectsData, '\nprojectData.id =', projectData.id);
+
     const filteredProjects = allProjectsData.filter(project => project.id !== projectData.id);
 
     return (
@@ -31,11 +33,11 @@ export default function Project({ projectData, allProjectsData }) {
             metaDescription={projectData.description}
             pageTitle={projectData.title}
         >
-            <PostLayout postData={projectData} />
+            <ProjectLayout postData={projectData} />
 
             <div className='bg-gray-100'>
-                <Blogs posts={filteredProjects} heading='More Projects' showEmail={false}/>
+                <Projects allProjectsData={filteredProjects} />
             </div>
         </Layout>
     );
-}
+};
