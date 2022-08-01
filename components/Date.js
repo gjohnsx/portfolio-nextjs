@@ -3,7 +3,7 @@ import { parseISO, format } from 'date-fns';
 export default function Date({ dateString }) {
     const date = parseISO(dateString);
     return (
-        <div className='text-center mb-2'>
+        <div className='my-2'>
             <time 
                 dateTime={dateString}
                 className=''
@@ -11,5 +11,5 @@ export default function Date({ dateString }) {
                 {format(date, 'LLLL d, yyyy')}
             </time>
         </div>
-    )
-}
+    );
+};

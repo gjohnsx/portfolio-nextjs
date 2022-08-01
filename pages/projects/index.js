@@ -1,6 +1,6 @@
-import { getSortedProjectsData } from '../lib/projects';
-import Blogs from "../components/Blogs";
-import Layout from "../components/Layout";
+import { getSortedProjectsData } from '../../lib/projects';
+import ProjectsLayout from '../../components/Projects';
+import Layout from "../../components/Layout";
 
 const metaDescription = "See what I've been building and what I've shipped.";
 const pageTitle = 'Projects';
@@ -15,18 +15,16 @@ export async function getStaticProps() {
   };
 
   
-export default function Posts({ allProjectsData }) {
+export default function Projects({ allProjectsData }) {
     return (
         <>
             <Layout
                 metaDescription={metaDescription}
                 pageTitle={pageTitle}
             >
-
-                <Blogs
-                    posts={allProjectsData}
-                    heading='Projects'
-                    showEmail={false}
+                
+                <ProjectsLayout
+                    allProjectsData={allProjectsData}
                 />
 
             </Layout>
