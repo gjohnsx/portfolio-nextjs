@@ -17,15 +17,11 @@ const Blog = ({ post }) => {
                 <div className="flex">
                     {post.tags.map(tag => (
                         <div key={tag} className="text-sm text-sky-800 mt-1 mr-1">
-                            {/* <Link href={`/posts/${tag.toLowerCase().replace('.', '-')}`}>
-                                <a> */}
-                                    <span
-                                        className='inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-sky-100'
-                                    >
-                                        {tag}
-                                    </span>
-                                {/* </a>
-                            </Link> */}
+                                <span
+                                    className='inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-sky-100'
+                                >
+                                    {tag}
+                                </span>
                         </div>
                     ))}
                 </div>

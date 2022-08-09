@@ -1,4 +1,6 @@
 import Date from "../Date";
+import Image from "next/image";
+import { CameraIcon } from '@heroicons/react/solid'
 
 export default function Post({ postData }) {
     return (
@@ -14,6 +16,20 @@ export default function Post({ postData }) {
                     {postData.title}
                 </span>
             </h1>
+
+            {postData.image && (
+                <figure>
+                    <Image
+                        src={postData.image.src}
+                        width={postData.image.width}
+                        height={postData.image.height}
+                    />
+                    <figcaption className="mt-3 flex text-sm text-gray-500">
+                        <CameraIcon className="flex-none w-5 h-5 text-gray-400" aria-hidden="true" />
+                        <span className="ml-2">{postData.image.figcaption}</span>
+                    </figcaption>
+                </figure>
+            )}
 
             <div
                 className=""

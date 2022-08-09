@@ -8,22 +8,26 @@ tags: ['Ideas']
 *The 'ideas' posts are unfinished, quick ideas that I want to write down somewhere and revisit later if it's a good enough idea to remember it.*
 
 ## NFT web app to show images and rarity
+
 - should be similar to Azuki Gallery but with any NFT project
 - long term - turn it into a fee free marketplace with phunks marketplace code
 - For any of these NFT sites, maybe you could use GraphQL and Next.js to have super fast filters on big collections of NFTs
 - filters that make graphql requests for different criteria, and it's searching all the pre-rendered objects
 
 ## Twitter API web app to allow grabbing likers and retweeters
+
 - users will enter their own API key to be able to use it
 - export to CSV or other database
 - it all runs client side so there's no storing of user data on my backend
 
 ## Website with my book highlights
+
 - inspirational quotes from books I've read that I want to be reminded of
 - can link to a page with all the quotes from that book that I highlighted
 - maybe just add a page to this site for my book notes like I used to have
 
 ## Quit one habit web app with email reminders
+
 - Web app to show you how many calories you are eating and drinking over time for one food or drink you indulge in
 - it tells you how many calories you're eating per week
 - tells you how many pounds you would lose and how quickly if you just change this one habit
@@ -51,6 +55,7 @@ tags: ['Ideas']
         - use the api to search foods
 
 ## Chrome extension - redesign OneTab to have a better user interface
+
 - when you click the button, ask for a name for the tab group, and a category, and an importance level
 - the new onetab page will be sortable, able to view categories, sorted by importance within each category
 - other features:
@@ -63,6 +68,7 @@ tags: ['Ideas']
     - helps with knowledge retention
 
 ## search page for NFTs
+
 - the google of NFT data dashboard and provenance
 - tracker for single nft provenance
     - brings up beautiful dashboard of all the history of the contract and specific ID

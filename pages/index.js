@@ -36,7 +36,7 @@ export default function HomePage({ allPostsData, allProjectsData }) {
               <Blogs posts={allPostsData} heading='Blogs' />
           </div>
         </section>
-        
+
       </Layout>
     </>
   );
