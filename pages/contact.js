@@ -13,7 +13,12 @@ export default function Contact() {
                 >
                     Contact me
                 </h1>
-                <ContactForm />
+                {/* <ContactForm /> */}
+                <p className='text-center text-gray-700 text-lg mt-12'>
+                    Email me at gjohnsx @ fastmail.com,
+                    <br />
+                    or message me on <a href='https://twitter.com/gjohnsx' className='underline text-sky-500'>Twitter</a> or <a href='https://www.linkedin.com/in/greg-johns/' className='underline text-sky-500'>LinkedIn</a>.
+                </p>
             </div>
         </Layout>
     );
