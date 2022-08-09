@@ -11,14 +11,14 @@ const aboutMeLinks = [
 
 export default function Hero() {
   return (
-    <main className="relative py-2 md:py-12">
+    <section className="hero relative">
       <Image
           src='/images/Gregory_anything_1e52c0e3-6620-4815-b57f-2a18987bb76f.png'
           layout='fill'
           objectFit='cover'
           className='-z-10'
         />
-      <div className="mx-auto max-w-7xl z-10">
+      <div className="mx-auto max-w-7xl z-10 py-24">
         <div className="md:grid md:grid-cols-12 md:gap-8">
           <div className="px-4 sm:px-6 text-center md:max-w-2xl md:mx-auto md:col-span-6 md:text-left md:flex md:items-center">
             <div className='py-4 px-10 bg-gray-700/60 rounded-lg shadow-lg'>
@@ -27,7 +27,6 @@ export default function Hero() {
                 <span className="text-white md:block">Gregory Johns</span>
               </h1>
 
-              {/* <h2 className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"> */}
               <h2 className="mt-5 max-w-prose mx-auto text-xl text-white">
                 Developer & Digital Marketer
               </h2>
@@ -66,6 +65,6 @@ export default function Hero() {
           </div> */}
         </div>
       </div>
-    </main>
+    </section>
   );
 };
