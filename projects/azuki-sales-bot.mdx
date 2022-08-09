@@ -16,19 +16,44 @@ productionLink: 'https://twitter.com/azukisales'
 githubLink: 'https://github.com/gjohnsx/Azuki-Sales-Bot'
 published: true
 ---
-## Notes
-This version uses the following APIs:
 
-- OpenSea API (need a key)
-- LooksRare API (free)
-- Etherscan API (free)
-- Ethplorer API (free)
-- Twitter API (you need elevated access to be able to post images using the v1 auth)
+## Why I built it in the first place
 
-## 💰 Marketplaces Supported
-It currently supports sales on OpenSea, LooksRare, and Gem.xyz.
+There used to be an Azuki sales bot on Twitter, but like many accounts on the platform it was arbitrarily suspended.
 
-## 🤖 How It Works
-I run it on AWS Lambda using a 5 minute trigger. Every 5 minutes, it gets the Ethereum block number that was mined 5 minutes ago. Then it checks all interactions with a given contract or contracts, and checks if they are a sale and if so, from which marketplace they came.
+It was January of 2021, and I was only 6 months in to my programming education. 
+I wondered how a Twitter bot even worked on a basic level. 
 
-If you want to use it for other contracts, you'll need to change the contracts in lambda_handler and the metadata image link in get_img_url_gem_sweep.
+I decided to investigate, and in so doing I learned about:
+- How to use an API
+- How to get data from a blockchain
+- How to use AWS Lambda
+
+The end result was a Twitter account that posts sales updates for 2 monitored Ethereum contracts.
+
+Here's a recent example from August 9, 2022:
+![Screenshot of the AzukiSales bot on Twitter, posting a notification that Azuki #9721 had sold for 7.8 Ethereum, which at the time of the screenshot was worth $13,336.83.](/images/projects/azuki-sales-bot/azuki-sale-8-9-2022.png)
+
+### How it works
+
+Every 5 minutes, the program gets the Ethereum block number that was mined 5 minutes ago. 
+Then it checks all interactions with a given contract, and checks if there had been anything that looks like a sale.
+If there was a sale, we save the image from the token metadata to local storage, upload it to Twitter, and then create a Tweet with the sales information and the image.
+
+### How my brain worked
+
+It was more difficult than I thought to just look at a transaction and be able to say, "Yep, that's a sale." There were a ton of weird transactions to sort through. And often a new contract would pop up that would be a new exception that I would have to learn, and then would have to teach the bot (like a new multi-purchase contract, or a lending protocol).
+Because of this, my functions are very long with a lot of If/Else trees -- pretty ugly!
+Multiple times I had to rethink through the logic of how I was getting data and how I needed to manipulate it. 
+I tried to think computationally and follow this basic formula:
+
+- Try to come up with the logical steps first, and fill in the blanks with functions that you can abstract later
+- Try to make the data that you get from the blockchain and what you do with it as DRY as possible
+
+### Conclusion
+
+I felt like a million bucks when one of the developers from Azuki reached out to me to offer any assistance in getting the bot up and running.
+
+That was the highlight of my young programming career! It felt great to contribute to an online community.
+
+## From this project, I gained the passion and the desire to learn more so that I can contribute more in the web3 world that I want to live in.
