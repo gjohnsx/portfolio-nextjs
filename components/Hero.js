@@ -16,7 +16,6 @@ export default function Hero() {
           src='/images/Gregory_anything_1e52c0e3-6620-4815-b57f-2a18987bb76f.png'
           layout='fill'
           objectFit='cover'
-          className='-z-10'
         />
       <div className="mx-auto max-w-7xl z-10 py-24">
         <div className="md:grid md:grid-cols-12 md:gap-8">
