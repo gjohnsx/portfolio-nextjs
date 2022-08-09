@@ -2,28 +2,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from '../public/images/5680pairbeanz-prod.png';
 import socialButtons from './social-buttons';
-// import backgroundImg from '../public/images/Gregory_anything_1e52c0e3-6620-4815-b57f-2a18987bb76f.png'
-
-{/* <div className='items-center'>
-    <Image
-      src={backgroundImg}
-      height={461}
-      width={1536}
-    />
-  </div>
-*/}
 
 const aboutMeLinks = [
   { title: 'How good are you at programming anyway?', href: '/posts/how-good-are-you-at-programming-anyway/' },
   { title: 'Why are you changing careers?', href: '/posts/why-are-you-changing-careers/' },
   { title: 'My coding journey', href: '/posts/my-coding-journey/' },
-]
+];
 
 export default function Hero() {
   return (
-    <main className={`bg-[url(/images/Gregory_anything_1e52c0e3-6620-4815-b57f-2a18987bb76f.png)] bg-center bg-cover py-2 md:py-36`}>
-    {/* <main className="bg-white py-2 md:py-12"> */}
-      <div className="mx-auto max-w-7xl">
+    <main className="relative py-2 md:py-12">
+      <Image
+          src='/images/Gregory_anything_1e52c0e3-6620-4815-b57f-2a18987bb76f.png'
+          layout='fill'
+          objectFit='cover'
+          className='-z-10'
+        />
+      <div className="mx-auto max-w-7xl z-10">
         <div className="md:grid md:grid-cols-12 md:gap-8">
           <div className="px-4 sm:px-6 text-center md:max-w-2xl md:mx-auto md:col-span-6 md:text-left md:flex md:items-center">
             <div className='py-4 px-10 bg-gray-700/60 rounded-lg shadow-lg'>
@@ -39,8 +34,8 @@ export default function Hero() {
 
               <div className="mt-2 lg:mt-8 flex flex-col space-y-6 justify-center md:justify-start">
                 {aboutMeLinks.map((item) => (
-                  <Link href={item.href}>
-                    <a key={item.title} className="text-white underline hover:text-orange-400">
+                  <Link key={item.title} href={item.href}>
+                    <a className="text-white underline hover:text-orange-400">
                       <span>{item.title}</span>
                     </a>
                   </Link>
@@ -69,7 +64,6 @@ export default function Hero() {
               width={300}
             />
           </div> */}
-
         </div>
       </div>
     </main>
