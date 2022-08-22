@@ -4,9 +4,9 @@ import profilePic from '../public/images/5680pairbeanz-prod.png';
 import socialButtons from './social-buttons';
 
 const aboutMeLinks = [
-  { title: 'How good are you at programming anyway?', href: '/posts/how-good-are-you-at-programming-anyway/' },
   { title: 'Why are you changing careers?', href: '/posts/why-are-you-changing-careers/' },
   { title: 'My coding journey', href: '/posts/my-coding-journey/' },
+  { title: 'How good are you at programming anyway?', href: '/posts/how-good-are-you-at-programming-anyway/' },
 ];
 
 export default function Hero() {
